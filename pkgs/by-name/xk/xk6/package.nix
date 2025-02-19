@@ -2,8 +2,7 @@
   lib,
   stdenv,
   buildGoModule,
-  fetchFromGitHub,
-  installShellFiles,
+  fetchFromGitHub
 }:
 
 buildGoModule rec {
@@ -23,9 +22,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  nativeBuildInputs = [ installShellFiles ];
-
-  doInstallCheck = false;
 
   meta = {
     description = "Build k6 with extensions";

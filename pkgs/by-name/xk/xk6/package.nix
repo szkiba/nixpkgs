@@ -2,7 +2,7 @@
   lib,
   stdenv,
   buildGoModule,
-  fetchFromGitHub
+  fetchFromGitHub,
 }:
 
 buildGoModule rec {
@@ -21,7 +21,6 @@ buildGoModule rec {
   sourceRoot = "${src.name}/cmd/xk6";
 
   vendorHash = null;
-
 
   meta = {
     description = "Build k6 with extensions";

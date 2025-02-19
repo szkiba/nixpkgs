@@ -32,9 +32,7 @@ buildGoModule rec {
     mainProgram = "xk6";
     homepage = "https://k6.io/";
     changelog = "https://github.com/grafana/xk6/releases/tag/v${version}";
-    license = licenses.asl20;
-    maintainers = with maintainers; [
-      szkiba
-    ];
+    license = lib.licenses.asl20;
+    maintainers = with lib.maintainers; [ szkiba ];
   };
 }

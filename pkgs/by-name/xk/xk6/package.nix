@@ -27,7 +27,7 @@ buildGoModule rec {
 
   doInstallCheck = false;
 
-  meta = with lib; {
+  meta = {
     description = "Build k6 with extensions";
     mainProgram = "xk6";
     homepage = "https://k6.io/";

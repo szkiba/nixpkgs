@@ -3,6 +3,7 @@
   stdenv,
   buildGoModule,
   fetchFromGitHub,
+  nix-update-script,
 }:
 
 buildGoModule rec {
@@ -21,6 +22,8 @@ buildGoModule rec {
   sourceRoot = "${src.name}/cmd/xk6";
 
   vendorHash = null;
+
+  passthru.updateScript = nix-update-script { };
 
   meta = {
     description = "Build k6 with extensions";
